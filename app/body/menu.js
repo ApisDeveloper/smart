@@ -43,7 +43,7 @@ Vue.component('s_menu', {
       this.menuPage = 'pause';
    },
    template: `
-   <div class="menu effect_text">
+   <div class="menu">
       <div class="menu_fone">
          <div class="menu_fone_header">
                <div class="menu_header_style" @click="MenuType('stats_template')" v-bind:class="{ menu_active: stats }"><p>Статистика</p></div>
