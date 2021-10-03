@@ -23,11 +23,11 @@ Vue.component('bot', {
    template: `
    <div class="global_flex_center smart_bot effect_text">
          <div class="smart_bot_box">
-            <h2 class="smart_bot_title">{{ bot_Title[type] }}</h2>
-            <p class="smart_bot_text">{{ bot_Text[type] }}</p>
+            <h2 class="smart_bot_title">{{ bot_Title[this.$root.typeBot] }}</h2>
+            <p class="smart_bot_text">{{ bot_Text[this.$root.typeBot] }}</p>
             <div class="smart_bot_btn_box">
-               <div class="smart_bot_btn" @click="HideCef_Bot">{{ bot_Btn_YES[type] }}</div>
-               <div class="smart_bot_btn smart_bot_btn_no" @click="HideCef_Bot">{{ bot_Btn_NO[type] }}</div>
+               <div class="smart_bot_btn" @click="HideCef_Bot">{{ bot_Btn_YES[this.$root.typeBot] }}</div>
+               <div class="smart_bot_btn smart_bot_btn_no" @click="HideCef_Bot">{{ bot_Btn_NO[this.$root.typeBot] }}</div>
             </div>
          </div>
       </div>

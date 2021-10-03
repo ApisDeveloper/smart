@@ -33,13 +33,13 @@ function PERSON(){
 function BOT(){
    // _PLINFO.interface = 'body';
    _PLINFO.interfacePage = 'bot';
-   _PLINFO.BotType = 1;
+   _PLINFO.BotType = 2;
    app.PageTypeUpdate();
 }
 function INFO(){
    // _PLINFO.interface = 'body';
    _PLINFO.interfacePage = 'info';
-   _PLINFO.TypeInfo = 1;
+   _PLINFO.TypeInfo = 2;
    app.PageTypeUpdate();
 }
 function MENU (){

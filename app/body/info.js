@@ -21,8 +21,8 @@ Vue.component('info', {
    template: `
    <div class="smart_information global_flex_center effect_text">
       <div class="smart_information_box">
-         <h2 class="smart_information_title">{{ info_Title[type] }}</h2>
-         <p class="smart_information_text">{{ info_Text[type] }}</p>
+         <h2 class="smart_information_title">{{ info_Title[this.$root.typeInfo] }}</h2>
+         <p class="smart_information_text">{{ info_Text[this.$root.typeInfo] }}</p>
          <div class="smart_information_btn" @click="HideCef_Info">Спасибо</div>
       </div>
    </div>

@@ -23,6 +23,7 @@ var app = new Vue({
     isFone: false,
     test_info: '',
     typeInfo: 1,
+    typeBot: 1,
   },
   methods:{
     StartCef(){
@@ -34,6 +35,9 @@ var app = new Vue({
     },
     PageTypeUpdate(){
       this.isFone = true;
+
+      this.typeInfo = _PLINFO.TypeInfo;
+      this.typeBot = _PLINFO.TypeBot;
 
       this.interfacePage = _PLINFO.interfacePage;
       this.test_info = `Test panel: ${this.interfaceType} ${this.interfacePage}`;
