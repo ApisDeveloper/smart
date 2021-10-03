@@ -140,7 +140,6 @@ Vue.component('s_menu', {
    _PLINFO.RegData = p_datareg;
    _PLINFO.Donate = p_donate;
  
-   _PLINFO.interface = 'body';
    _PLINFO.interfacePage = 'menu';
 
    app.PageTypeUpdate();

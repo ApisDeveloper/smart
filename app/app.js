@@ -4,7 +4,7 @@ let _PLINFO = [];
 _PLINFO.interface;                    //тип открытой страницы интерфейса
 _PLINFO.interfacePage;                //тип действия интерфейса
 
-_PLINFO.BotType;                      //бот с которым действует игрок
+_PLINFO.TypeBot;                      //бот с которым действует игрок
 _PLINFO.TypeInfo;                     //тип всплывающей информации
 
 _PLINFO.Name;                         //имя игрока
@@ -22,8 +22,8 @@ var app = new Vue({
     interfacePage: '',
     isFone: false,
     test_info: '',
-    typeInfo: 1,
-    typeBot: 1,
+    typeInfo: 0,
+    typeBot: 0,
   },
   methods:{
     StartCef(){
@@ -44,7 +44,6 @@ var app = new Vue({
     },
     PageClose(){
       this.isFone = false;
-      // this.interfaceType = 'interface';
       this.interfacePage = 'window';
 
       cef.set_focus(false);
