@@ -50,7 +50,7 @@ Vue.component('register', {
       },
    },
    template: `
-   <div class="login global_flex_center effect_text">
+   <div class="login global_flex_center">
       <div class="registration_center">
          <div class="form_registration">
             <h2>Регистрация</h2>

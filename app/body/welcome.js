@@ -19,7 +19,7 @@ Vue.component('welcome', {
        },
    },
    template: `
-   <div class="welcome global_flex_center effect_text">
+   <div class="welcome global_flex_center">
       <p><span>{{ w_pName }}</span></p>
       <p>добро пожаловать на</p>
       <p>Smart RP 2.0!</p>
