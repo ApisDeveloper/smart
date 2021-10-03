@@ -1,0 +1,83 @@
+.login{
+   width: 100%;
+   height: 100%;
+   color: aliceblue;
+}
+.form_registration{
+   color: white;
+   flex-direction: column;
+   width: 350px;
+}
+.form_registration h2{
+   font-size: 40px;
+   font-weight: 700;
+   margin-bottom: 20px;
+}
+.form_registration p{
+   text-align: center;
+   margin-bottom: 30px;
+}
+.form_button{
+   background: none;
+   border: 1px solid grey;
+   color: white;
+   font-size: 18px;
+   margin-top: 30px;
+   font-weight: 700;
+   height: 60px;
+   width: 100%;
+}
+.form_button:hover {
+   border: none;
+   background-color: #00ff90;
+}
+.form_lable {
+   width: 100%;
+   height: 50px;
+   margin-bottom: 20px;
+   position: relative;
+   border: 1px solid grey;
+   display: block;
+}
+.form_lable input {
+   width: 100%;
+   padding: 10px;
+   border: none;
+   outline: none;
+   background: transparent;
+   font-size: 18px;
+   bottom: 0;
+   color: white;
+}
+.form_lable span {
+   color: white;
+   position: absolute;
+   top: 15px;
+   left: 20px;
+   transition: 0.2s;
+   cursor: text;
+}
+.form_lable input:focus + span,
+.form_lable input:valid + span {
+top: -8px;
+left: 10px;
+font-size: 12px;
+}
+.form_line {
+   width: 0px;
+   height: 2px;
+   position: absolute;
+   bottom: 0;
+   background: grey;
+   transition: 0.2s;
+}
+.form_lable input:focus ~ .form_line,
+.form_lable input:valid ~ .form_line {width: 100%;}
+.login_password_restore{
+   color: grey;
+   display: block;
+   margin-top: 30px;
+}
+.login_password_restore:hover {
+   color: white;
+}

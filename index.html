@@ -1,0 +1,76 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+      <!-- Заголовок страницы в браузере -->
+      <title></title>
+      <!-- Шрифты -->
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+      <!-- Подключаем CSS -->
+      <link rel="stylesheet" href="css/default.css">
+      <link rel="stylesheet" href="css/body/welcome.css">
+      <link rel="stylesheet" href="css/body/login.css">
+      <link rel="stylesheet" href="css/body/person.css">
+      <link rel="stylesheet" href="css/body/bot.css">
+      <link rel="stylesheet" href="css/body/info.css">
+      <link rel="stylesheet" href="css/body/menu.css">
+
+      <link rel="stylesheet" href="css/interface/window.css">
+      <!-- Кодировка страницы -->
+      <!-- С появлением HTML5 можно использовать  -->
+      <meta charset="UTF-8">
+      <!-- Vue  -->
+      <script src="app/vue.js"></script>
+      <!-- Scripts  -->
+      <script src="app/interface/intro.js"></script>
+      <script src="app/interface/window.js"></script>
+
+      <script src="app/body/welcome.js"></script>
+      <script src="app/body/login.js"></script>
+      <script src="app/body/register.js"></script>
+      <script src="app/body/person.js"></script>
+      <script src="app/body/bot.js"></script>
+      <script src="app/body/info.js"></script>
+      <script src="app/body/menu.js"></script>
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+      <div id="content" class="smart_content" v-bind:class="{ fone: isFone }">
+         <div class="check">
+            <p>{{ test_info }}</p>
+            <button class="checkBtn" onclick="INTRO()">INTRO</button>
+            <button class="checkBtn" onclick="WELCOME()">WELCOME</button>
+            <button class="checkBtn" onclick="WINDOW()">WINDOW</button>
+            <button class="checkBtn" onclick="LOGIN()">LOGIN</button>
+            <button class="checkBtn" onclick="REG()">REG</button>
+            <button class="checkBtn" onclick="BOT()">BOT</button>
+            <button class="checkBtn" onclick="PERSON()">PERSON</button>
+            <button class="checkBtn" onclick="INFO()">INFO</button>
+            <button class="checkBtn" onclick="MENU()">MENU</button>
+            <button class="checkBtn" onclick="CLOSE()">CLOSE</button>
+         </div>
+
+         <template v-if="interfaceType == 'interface'">
+            <intro v-show="interfacePage == 'intro'"></intro>
+            <window v-show="interfacePage == 'window'"></window>
+            <welcome v-show="interfacePage == 'welcome'"></welcome>
+            <login v-show="interfacePage == 'login'"></login>
+            <register v-show="interfacePage == 'register'"></register>
+            <person v-show="interfacePage == 'person'"></person>
+            <bot v-show="interfacePage == 'bot'"></bot>
+            <info v-show="interfacePage == 'info'"></info>
+            <s_menu v-show="interfacePage == 'menu'"></s_menu>
+         </template>
+
+         <!-- <template v-if="interfaceType == 'body'">
+            
+         </template> -->
+
+      </div>
+	</body>
+   <script src="app/check.js"></script>
+   
+   <script src="app/app.js"></script>
+</html>
