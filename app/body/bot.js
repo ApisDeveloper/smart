@@ -37,7 +37,7 @@ Vue.component('bot', {
 cef.on("CEF:smart_bot", (type) => {  
    _PLINFO.interface = 'body';
    _PLINFO.interfacePage = 'bot';
-   _PLINFO.BotType = type;
+   _PLINFO.TypeBot = type;
    app.PageTypeUpdate();
    cef.set_focus(true);
 });
