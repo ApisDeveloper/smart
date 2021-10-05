@@ -19,7 +19,7 @@ Vue.component('window', {
       </div>
       <div class="window_info">
          <h1>{{ win_Title[this.$root.typeWindow] }}</h1>
-         <p>{{ win_Text[this.$root.typeWindow] }} {{this.$root.TypeWinStatus}}/win_Status[this.$root.typeWindow]</p>
+         <p>{{ win_Text[this.$root.typeWindow] }} {{this.$root.TypeWinStatus}}/{{win_Status[this.$root.typeWindow]}}</p>
       </div>
    </div>
    `
