@@ -33,6 +33,8 @@ var app = new Vue({
     DataPlayerUpdate(){
       this.typeInfo = _PLINFO.TypeInfo;
       this.typeBot = _PLINFO.TypeBot;
+      this.typeWindow = _PLINFO.TypeWindow;
+      this.TypeWinStatus = _PLINFO.TypeWinStatus;
     },
     StartCef(){
       this.interfaceType = _PLINFO.interface;
