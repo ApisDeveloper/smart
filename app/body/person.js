@@ -106,7 +106,7 @@ Vue.component('person', {
       this.CreatePersonUpdate();
    },
    template: `
-   <div class="create_person effect_text">
+   <div class="create_person">
       <div class="create_person_content">
          <div class="create_person_left">
             <div class="create_person_left_top">

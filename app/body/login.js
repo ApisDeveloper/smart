@@ -16,7 +16,7 @@ Vue.component('login', {
       },
    },
    template: `
-   <div class="login global_flex_center effect_text">
+   <div class="login global_flex_center">
       <div class="login_center">
          <div class="form_registration">
             <h2>Авторизация</h2>

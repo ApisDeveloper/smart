@@ -6,6 +6,8 @@ _PLINFO.interfacePage;                //тип действия интерфей
 
 _PLINFO.TypeBot;                      //бот с которым действует игрок
 _PLINFO.TypeInfo;                     //тип всплывающей информации
+_PLINFO.TypeWindow;                   //тип квестового задания
+_PLINFO.TypeWinStatus;                //выполнено заданий из общего количества
 
 _PLINFO.Name;                         //имя игрока
 _PLINFO.Password;                     //пароль игрока
@@ -24,8 +26,14 @@ var app = new Vue({
     test_info: '',
     typeInfo: 0,
     typeBot: 0,
+    typeWindow: 0,
+    TypeWinStatus: 0,
   },
   methods:{
+    DataPlayerUpdate(){
+      this.typeInfo = _PLINFO.TypeInfo;
+      this.typeBot = _PLINFO.TypeBot;
+    },
     StartCef(){
       this.interfaceType = _PLINFO.interface;
       this.isFone = true;
@@ -35,9 +43,8 @@ var app = new Vue({
     },
     PageTypeUpdate(){
       this.isFone = true;
-
-      this.typeInfo = _PLINFO.TypeInfo;
-      this.typeBot = _PLINFO.TypeBot;
+      
+      this.DataPlayerUpdate();
 
       this.interfacePage = _PLINFO.interfacePage;
       this.test_info = `Test panel: ${this.interfaceType} ${this.interfacePage}`;

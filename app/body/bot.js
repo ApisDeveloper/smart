@@ -17,17 +17,22 @@ Vue.component('bot', {
    },
    methods:{
       HideCef_Bot(type){
+         if(_PLINFO.TypeBot != 0){
+            if(type == 'yes'){
+               cef.emit("CEF_Data_Quest", this.$root.typeBot, 0);
+            }
+         }
          app.PageClose();
       },
    },
    template: `
-   <div class="global_flex_center smart_bot effect_text">
+   <div class="global_flex_center smart_bot">
          <div class="smart_bot_box">
             <h2 class="smart_bot_title">{{ bot_Title[this.$root.typeBot] }}</h2>
             <p class="smart_bot_text">{{ bot_Text[this.$root.typeBot] }}</p>
             <div class="smart_bot_btn_box">
-               <div class="smart_bot_btn" @click="HideCef_Bot">{{ bot_Btn_YES[this.$root.typeBot] }}</div>
-               <div class="smart_bot_btn smart_bot_btn_no" @click="HideCef_Bot">{{ bot_Btn_NO[this.$root.typeBot] }}</div>
+               <div class="smart_bot_btn" @click="HideCef_Bot('yes')">{{ bot_Btn_YES[this.$root.typeBot] }}</div>
+               <div class="smart_bot_btn smart_bot_btn_no" @click="HideCef_Bot('no')">{{ bot_Btn_NO[this.$root.typeBot] }}</div>
             </div>
          </div>
       </div>
